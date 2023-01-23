@@ -28,14 +28,29 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](/screenshots/screenshot1.png)
+
+
+![](./screenshots/screenshot2.png)
+
+
+![](./screenshots/screenshot3.png)
+
+
+![](./screenshots/screenshot4.png)
+
+
+![](./screenshots/screenshot5.png)
+
+
+![](./screenshots/screenshot6.png)
 
 These are screenshot of some of the features of the website. You can view it all on live at [Rock-Paper-Scissors-Gme]
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Solution URL here](https://www.frontendmentor.io/challenges/rock-paper-scissors-game-pTgwgvgH/hub)
+- Live Site URL: [Live site URL here](https://game-rockk-paper-scissors.netlify.app/)
 
 ## My process
 
