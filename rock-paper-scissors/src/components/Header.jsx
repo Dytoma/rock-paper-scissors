@@ -6,8 +6,18 @@ import Zoom from 'react-reveal/Zoom';
 
 
 const Header = () => {
-  const { score, advanced } = useContext(AppContext);
-  
+  const { score, advanced, setScore } = useContext(AppContext);
+
+  useEffect(() => {
+    const theScore = localStorage.getItem('gameScore');
+
+    const num = Number(theScore);
+
+    num ? setScore(num) : setScore(12);
+    if (num < -12) {
+      setScore(12);
+    }
+  }, [])
 
   return (
     <header className='header'>
