@@ -2,7 +2,6 @@ import { useState, createContext, useEffect } from 'react'
 import './App.css'
 import Step1 from './components/Step1';
 import Step2 from './components/Step2';
-import Rules from './components/Rules';
 import Header from './components/Header';
 import DeskRules from './assets/image-rules.svg';
 import BonusRules from './assets/image-rules-bonus.svg';

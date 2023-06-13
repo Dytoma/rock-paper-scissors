@@ -1,8 +1,7 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext, useEffect } from 'react';
 import Logo from '../assets/logo.svg';
 import BonusLogo from '../assets/logo-bonus.svg';
 import { AppContext } from '../App';
-import Zoom from 'react-reveal/Zoom';
 
 
 const Header = () => {
