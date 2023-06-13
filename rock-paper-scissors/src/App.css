@@ -577,3 +577,11 @@
     height: 100%;
 }
 
+.justify-end {
+  justify-content: end;
+}
+
+.items-end {
+  align-items: end;
+}
+
