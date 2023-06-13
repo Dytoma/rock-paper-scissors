@@ -3,7 +3,6 @@ import { AppContext } from '../App';
 import Scissors from '../assets/icon-scissors.svg';
 import Rock from '../assets/icon-rock.svg';
 import Paper from '../assets/icon-paper.svg';
-import Zoom from 'react-reveal/Zoom';
 import Lizard from '../assets/icon-lizard.svg';
 import Spock from '../assets/icon-spock.svg';
 
@@ -12,6 +11,8 @@ import lose from '../assets/sounds/lose.mp3';
 import success from '../assets/sounds/success.mp3';
 import noWin from '../assets/sounds/draw.mp3';
 import clickSound from '../assets/sounds/bip.mp3';
+
+import { easeInOut, motion } from 'framer-motion'
 
 
 const Step2 = () => {
@@ -153,16 +154,20 @@ const Step2 = () => {
         </div>
 
 
-        <Zoom clear delay={5000} duration={1500}>
-          <div className='verdict-md'>
-            <h1 className='verdict__text'>{win === "user" ? "You win" : win === "house" ? "You lose" : "Draw"}</h1>
-            <button className='verdict__button' onClick={() => {
-              setStep1(true);
-              setStep2(false);
-              playSound(clickSound);
-            }}>Play again</button>
-          </div>
-        </Zoom>
+
+        <motion.div className='verdict-md'
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1, scale: [0, 1] }}
+          transition={{ duration: 1.5, delay: 5, ease: easeInOut }}
+        >
+          <h1 className='verdict__text'>{win === "user" ? "You win" : win === "house" ? "You lose" : "Draw"}</h1>
+          <button className='verdict__button' onClick={() => {
+            setStep1(true);
+            setStep2(false);
+            playSound(clickSound);
+          }}>Play again</button>
+        </motion.div>
+
 
 
         <div className='player'>
@@ -170,39 +175,51 @@ const Step2 = () => {
           {advanced &&
             <div className='relative'>
               <div className='shadow' />
-              <Zoom clear delay={3000} duration={2000}>
-                <div className={`${house[houseChoice].style1}`}>
-                  <button className={house[houseChoice].style2} aria-label='computer choice'>
-                    <img src={houseChoice === 0 ? Paper : houseChoice === 1 ? Scissors : Rock} alt="computer's choice illustration" />
-                  </button>
-                </div>
-              </Zoom>
+
+              <motion.div className={`${house[houseChoice].style1}`}
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1, scale: [0, 1] }}
+                transition={{ duration: 2, delay: 3, ease: easeInOut }}
+              >
+                <button className={house[houseChoice].style2} aria-label='computer choice'>
+                  <img src={houseChoice === 0 ? Paper : houseChoice === 1 ? Scissors : Rock} alt="computer's choice illustration" />
+                </button>
+              </motion.div>
+
             </div>
           }
           {!advanced &&
             <div className='relative'>
               <div className='shadow' />
-              <Zoom clear delay={3000} duration={2000}>
-                <div className={houseAdvanced[houseChoice].style1}>
-                  <button className={houseAdvanced[houseChoice].style2} aria-label='computer choice'>
-                    <img src={houseChoice === 0 ? Paper : houseChoice === 1 ? Scissors : houseChoice === 2 ? Rock : houseChoice === 3 ? Lizard : Spock} alt="computer's choice illustration" />
-                  </button>
-                </div>
-              </Zoom>
+
+              <motion.div className={houseAdvanced[houseChoice].style1}
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1, scale: [0, 1] }}
+                transition={{ duration: 2, delay: 3, ease: easeInOut }}
+              >
+                <button className={houseAdvanced[houseChoice].style2} aria-label='computer choice'>
+                  <img src={houseChoice === 0 ? Paper : houseChoice === 1 ? Scissors : houseChoice === 2 ? Rock : houseChoice === 3 ? Lizard : Spock} alt="computer's choice illustration" />
+                </button>
+              </motion.div>
+
             </div>
           }
         </div>
 
-        <Zoom clear delay={5000} duration={1500}>
-          <div className='verdict-sm'>
-            <h1 className='verdict__text'>{win === "user" ? "You win" : win === "house" ? "You lose" : "Draw"}</h1>
-            <button className='verdict__button' onClick={() => {
-              setStep1(true);
-              setStep2(false);
-              playSound(clickSound);
-            }}>Play again</button>
-          </div>
-        </Zoom>
+
+        <motion.div className='verdict-sm'
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1, scale: [0, 1] }}
+          transition={{ duration: 1.5, delay: 5, ease: easeInOut }}
+        >
+          <h1 className='verdict__text'>{win === "user" ? "You win" : win === "house" ? "You lose" : "Draw"}</h1>
+          <button className='verdict__button' onClick={() => {
+            setStep1(true);
+            setStep2(false);
+            playSound(clickSound);
+          }}>Play again</button>
+        </motion.div>
+
       </div>
     </div>
   )
