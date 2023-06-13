@@ -50,7 +50,7 @@ These are screenshot of some of the features of the website. You can view it all
 ### Links
 
 - Solution URL: [Solution URL here](https://www.frontendmentor.io/challenges/rock-paper-scissors-game-pTgwgvgH/hub)
-- Live Site URL: [Live site URL here](https://game-rockk-paper-scissors.netlify.app/)
+- Live Site URL: [Live site URL here](https://rock-paper-scissors-two-gold.vercel.app/)
 
 ## My process
 
