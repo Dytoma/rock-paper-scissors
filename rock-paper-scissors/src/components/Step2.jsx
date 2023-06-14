@@ -12,7 +12,7 @@ import success from '../assets/sounds/success.mp3';
 import noWin from '../assets/sounds/draw.mp3';
 import clickSound from '../assets/sounds/bip.mp3';
 
-import { easeInOut, motion } from 'framer-motion'
+import { easeInOut, motion } from 'framer-motion';
 
 
 const Step2 = () => {
@@ -108,7 +108,7 @@ const Step2 = () => {
 
 
   return (
-    <div onLoad={() => {
+    <section onLoad={() => {
       game();
     }}>
       <div className='step2'>
@@ -221,7 +221,7 @@ const Step2 = () => {
         </motion.div>
 
       </div>
-    </div>
+    </section>
   )
 }
 

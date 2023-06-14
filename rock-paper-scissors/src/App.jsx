@@ -38,7 +38,7 @@ function App() {
 
 
   return (
-    <div className="App">
+    <main className="App">
       <AppContext.Provider value={value}>
         <div style={{ position: 'absolute', color: 'white', fontSize: "1rem" }}>
           Coded by <a href="https://www.frontendmentor.io/profile/Dytoma" style={{ color: 'hsl(243, 100%, 62%)', textDecoration: 'none' }}>Dytoma</a>.
@@ -77,7 +77,7 @@ function App() {
           }}>RULES</button>
         </div>
       </AppContext.Provider>
-    </div>
+    </main>
   )
 }
 

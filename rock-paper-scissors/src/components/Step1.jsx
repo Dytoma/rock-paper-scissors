@@ -25,7 +25,7 @@ const Step1 = () => {
 
   
   return (
-    <div className='step1'>
+    <section className='step1'>
 
 
       {advanced &&
@@ -134,7 +134,7 @@ const Step1 = () => {
           </div>
         </div>
       }
-    </div>
+    </section>
   )
 }
 
